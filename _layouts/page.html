@@ -1,14 +1,19 @@
 ---
 layout: default
 ---
-<article class="post">
+<section class="sidebar">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+{% for page in site.pages %}
+	{% if page.headerTitle %}
+	<!-- <a href="/typography">Typography</a>
+	<a href="/grid">Grid</a>
+	<a href="#">Colors</a>
+	<a href="#">Forms</a> -->
+	<a href="{{ page.permalink }}">{{page.headerTitle}}</a>
+	{% endif %}
+{% endfor %}
+</section>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+<h1>{{page.headerTitle}}</h1>
 
-</article>
+{{content}}

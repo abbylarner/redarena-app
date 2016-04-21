@@ -43,6 +43,13 @@ $on-laptop:        800px;
     }
 }
 
+.sidebar {
+	float: left;
+	width: 25%;
+	background-color: red;
+	height: 100em;
+}
+
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
